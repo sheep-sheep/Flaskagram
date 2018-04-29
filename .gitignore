@@ -57,3 +57,6 @@ env/
 
 # Pycharm folder
 .idea/
+
+#sqlite file
+*.db
