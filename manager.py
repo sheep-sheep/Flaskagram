@@ -31,7 +31,7 @@ def _test_create_users():
         for j in range(3):
             db.session.add(Image(urls[random.randint(0,3)], i+1))
             for k in range(3):
-                db.session.add(Comment('I like it very much!', j+1, i+1))
+                db.session.add(Comment('I like it very much!', k+1, i+1))
     db.session.commit()
 
 
