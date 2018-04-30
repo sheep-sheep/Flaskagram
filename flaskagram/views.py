@@ -2,8 +2,8 @@
 
 
 from flaskagram import app
-
+from flask import render_template
 
 @app.route('/')
 def index():
-    return 'This is Flaskagram'
+    return render_template('index.html')

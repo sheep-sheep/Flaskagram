@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+{% block title %}Home Page{% endblock %}
+{% block css %}../static/styles/index.css{% endblock %}
+{% block pagebody %}{% endblock %}
+<body>
+    <div class="container">
+        <section>
+            <header class="header">
+                <div class="header-cont">
+                    <a class="logo" href="/">logo</a>
+                    <div class="web-menu">
+
+                        <a class="profile-ico" href="/loginpage/">登陆</a>
+
+                    </div>
+                    <div class="web-menu" >
+
+                    </div>
+                </div>
+            </header>
+
+<div class="page-main">
+    <article>
+        <div class="list-mod">
+            <!--<div class="page-main clearfix js-image-list">-->
+            <div class="page-main clearfix js-image-list">
+
+                <article class="mod">
+                    <header class="mod-hd">
+                        <time class="time">2016-07-21 21:31:02</time>
+                        <a href="/profile/2" class="avatar">
+                            <!--
+                            image.user.id  image.user.head_url image.user.username 这迹象都显示不了
+                            但是在 manage.py 中却可以通过 image.user.id image.user.head_url 查询得到，不知为何？
+                            哈哈哈哈，，，不是查不到，而是所查询到不存在，编号出现了问题，，，，已解决
+                            -->
+                            <img src="https://images.unsplash.com/profile-1465318440583-698881dcff76?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;fit=crop&amp;h=32&amp;w=32&amp;s=b698ef7381b9856df35afc1df9479af0">
+                        </a>
+                        <div class="profile-info">
+                            <a title="royaannmillera" href="/profile/2">royaannmillera</a>
+                        </div>
+                    </header>
+                    <div class="mod-bd">
+                        <div class="img-box">
+                            <a href="/image/5">
+                                <img src="https://images.unsplash.com/photo-1465232377925-cce9a9d87843?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=598b4757ff366f73289f6b94773dd52d">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mod-ft">
+                        <ul class="discuss-list">
+                            <li class="more-discuss">
+                                <a href="/image/5/">
+                                    <span>全部 </span><span class="" >8</span>
+                                    <span> 条评论</span></a>
+                            </li>
+                            <div class="js-comment-list-5">
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/2" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">royaannmillera</a>
+                                <span>
+                                    <span>给世上某个姑娘的情书</span>
+                                </span>
+                            </li>
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/2" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">royaannmillera</a>
+                                <span>
+                                    <span>有些人，比起朋友，更</span>
+                                </span>
+                            </li>
+
+
+                            </div>
+                        </ul>
+                        <section class="discuss-edit">
+                            <a class="icon-heart-empty js-heart"></a>
+                            <!--don't know how to change the color of heart just like add comment in index page-->
+                            <input placeholder="添加评论..." id="jsCmt" type="text">
+                            <button class="more-info" id="5" content="请到图片详情页进行评论！" onclick=addcomment(this)>更多选项</button>
+                        </section>
+                    </div>
+                </article>
+
+
+                <article class="mod">
+                    <header class="mod-hd">
+                        <time class="time">2016-12-21 11:14:03</time>
+                        <a href="/profile/29" class="avatar">
+                            <!--
+                            image.user.id  image.user.head_url image.user.username 这迹象都显示不了
+                            但是在 manage.py 中却可以通过 image.user.id image.user.head_url 查询得到，不知为何？
+                            哈哈哈哈，，，不是查不到，而是所查询到不存在，编号出现了问题，，，，已解决
+                            -->
+                            <img src="http://images.nowcoder.com/head/146t.png">
+                        </a>
+                        <div class="profile-info">
+                            <a title="abcd" href="/profile/29">abcd</a>
+                        </div>
+                    </header>
+                    <div class="mod-bd">
+                        <div class="img-box">
+                            <a href="/image/98">
+                                <img src="http://oa6ndt5vp.bkt.clouddn.com/867c1026c72b11e68c6300163e004791.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mod-ft">
+                        <ul class="discuss-list">
+                            <li class="more-discuss">
+                                <a href="/image/98/">
+                                    <span>全部 </span><span class="" >1</span>
+                                    <span> 条评论</span></a>
+                            </li>
+                            <div class="js-comment-list-98">
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/29" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">abcd</a>
+                                <span>
+                                    <span>OK!</span>
+                                </span>
+                            </li>
+
+                            </div>
+                        </ul>
+                        <section class="discuss-edit">
+                            <a class="icon-heart-empty js-heart"></a>
+                            <!--don't know how to change the color of heart just like add comment in index page-->
+                            <input placeholder="添加评论..." id="jsCmt" type="text">
+                            <button class="more-info" id="98" content="请到图片详情页进行评论！" onclick=addcomment(this)>更多选项</button>
+                        </section>
+                    </div>
+                </article>
+
+
+                <article class="mod">
+                    <header class="mod-hd">
+                        <time class="time">2016-07-21 21:31:02</time>
+                        <a href="/profile/5" class="avatar">
+                            <!--
+                            image.user.id  image.user.head_url image.user.username 这迹象都显示不了
+                            但是在 manage.py 中却可以通过 image.user.id image.user.head_url 查询得到，不知为何？
+                            哈哈哈哈，，，不是查不到，而是所查询到不存在，编号出现了问题，，，，已解决
+                            -->
+                            <img src="https://images.unsplash.com/profile-1466595709095-1fe336de40af?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;fit=crop&amp;h=32&amp;w=32&amp;s=23c2e6a29b11a52d51b444a43b18d4f9">
+                        </a>
+                        <div class="profile-info">
+                            <a title="ross_sokolovskis" href="/profile/5">ross_sokolovskis</a>
+                        </div>
+                    </header>
+                    <div class="mod-bd">
+                        <div class="img-box">
+                            <a href="/image/19">
+                                <img src="https://images.unsplash.com/photo-1465441494912-68f5747c3fe0?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=2e4baaec4791d41f8a961680440e244d">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mod-ft">
+                        <ul class="discuss-list">
+                            <li class="more-discuss">
+                                <a href="/image/19/">
+                                    <span>全部 </span><span class="" >3</span>
+                                    <span> 条评论</span></a>
+                            </li>
+                            <div class="js-comment-list-19">
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/5" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">ross_sokolovskis</a>
+                                <span>
+                                    <span>待我们老了，还要一起</span>
+                                </span>
+                            </li>
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/5" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">ross_sokolovskis</a>
+                                <span>
+                                    <span>总是天真的以为 等到最</span>
+                                </span>
+                            </li>
+
+
+                            </div>
+                        </ul>
+                        <section class="discuss-edit">
+                            <a class="icon-heart-empty js-heart"></a>
+                            <!--don't know how to change the color of heart just like add comment in index page-->
+                            <input placeholder="添加评论..." id="jsCmt" type="text">
+                            <button class="more-info" id="19" content="请到图片详情页进行评论！" onclick=addcomment(this)>更多选项</button>
+                        </section>
+                    </div>
+                </article>
+
+
+                <article class="mod">
+                    <header class="mod-hd">
+                        <time class="time">2016-07-21 21:31:02</time>
+                        <a href="/profile/2" class="avatar">
+                            <!--
+                            image.user.id  image.user.head_url image.user.username 这迹象都显示不了
+                            但是在 manage.py 中却可以通过 image.user.id image.user.head_url 查询得到，不知为何？
+                            哈哈哈哈，，，不是查不到，而是所查询到不存在，编号出现了问题，，，，已解决
+                            -->
+                            <img src="https://images.unsplash.com/profile-1465318440583-698881dcff76?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;fit=crop&amp;h=32&amp;w=32&amp;s=b698ef7381b9856df35afc1df9479af0">
+                        </a>
+                        <div class="profile-info">
+                            <a title="royaannmillera" href="/profile/2">royaannmillera</a>
+                        </div>
+                    </header>
+                    <div class="mod-bd">
+                        <div class="img-box">
+                            <a href="/image/8">
+                                <img src="https://images.unsplash.com/photo-1456894332557-b03dc5cf60d5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=195ce7eec98a2379325e814c43a6cc2e">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mod-ft">
+                        <ul class="discuss-list">
+                            <li class="more-discuss">
+                                <a href="/image/8/">
+                                    <span>全部 </span><span class="" >3</span>
+                                    <span> 条评论</span></a>
+                            </li>
+                            <div class="js-comment-list-8">
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/2" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">royaannmillera</a>
+                                <span>
+                                    <span>天南水北，淡淡想起</span>
+                                </span>
+                            </li>
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/2" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">royaannmillera</a>
+                                <span>
+                                    <span>别拿喜欢开玩笑</span>
+                                </span>
+                            </li>
+
+
+                            </div>
+                        </ul>
+                        <section class="discuss-edit">
+                            <a class="icon-heart-empty js-heart"></a>
+                            <!--don't know how to change the color of heart just like add comment in index page-->
+                            <input placeholder="添加评论..." id="jsCmt" type="text">
+                            <button class="more-info" id="8" content="请到图片详情页进行评论！" onclick=addcomment(this)>更多选项</button>
+                        </section>
+                    </div>
+                </article>
+
+
+                <article class="mod">
+                    <header class="mod-hd">
+                        <time class="time">2016-07-21 21:31:02</time>
+                        <a href="/profile/12" class="avatar">
+                            <!--
+                            image.user.id  image.user.head_url image.user.username 这迹象都显示不了
+                            但是在 manage.py 中却可以通过 image.user.id image.user.head_url 查询得到，不知为何？
+                            哈哈哈哈，，，不是查不到，而是所查询到不存在，编号出现了问题，，，，已解决
+                            -->
+                            <img src="https://images.unsplash.com/profile-1454994701248-ea5cee4726f4?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;fit=crop&amp;h=32&amp;w=32&amp;s=a09f6b5b3d0eb9c7b3f75e270992c7d9">
+                        </a>
+                        <div class="profile-info">
+                            <a title="teddykelleyq" href="/profile/12">teddykelleyq</a>
+                        </div>
+                    </header>
+                    <div class="mod-bd">
+                        <div class="img-box">
+                            <a href="/image/48">
+                                <img src="http://www.tuweng.com/d/file/feeling/2014-10-09/5528b8428f0c7c78182663db5d571c8a.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mod-ft">
+                        <ul class="discuss-list">
+                            <li class="more-discuss">
+                                <a href="/image/48/">
+                                    <span>全部 </span><span class="" >2</span>
+                                    <span> 条评论</span></a>
+                            </li>
+                            <div class="js-comment-list-48">
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/12" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">teddykelleyq</a>
+                                <span>
+                                    <span>ÈÃ°®ÐÒ¸£</span>
+                                </span>
+                            </li>
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/12" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">teddykelleyq</a>
+                                <span>
+                                    <span>顾城――我不知道怎样</span>
+                                </span>
+                            </li>
+
+                            </div>
+                        </ul>
+                        <section class="discuss-edit">
+                            <a class="icon-heart-empty js-heart"></a>
+                            <!--don't know how to change the color of heart just like add comment in index page-->
+                            <input placeholder="添加评论..." id="jsCmt" type="text">
+                            <button class="more-info" id="48" content="请到图片详情页进行评论！" onclick=addcomment(this)>更多选项</button>
+                        </section>
+                    </div>
+                </article>
+
+
+                <article class="mod">
+                    <header class="mod-hd">
+                        <time class="time">2016-07-21 21:31:02</time>
+                        <a href="/profile/3" class="avatar">
+                            <!--
+                            image.user.id  image.user.head_url image.user.username 这迹象都显示不了
+                            但是在 manage.py 中却可以通过 image.user.id image.user.head_url 查询得到，不知为何？
+                            哈哈哈哈，，，不是查不到，而是所查询到不存在，编号出现了问题，，，，已解决
+                            -->
+                            <img src="https://images.unsplash.com/profile-1445571144389-c57510c7248c?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;fit=crop&amp;h=32&amp;w=32&amp;s=bc06c102178cc07b3322360a16915805">
+                        </a>
+                        <div class="profile-info">
+                            <a title="dan_carl5ony" href="/profile/3">dan_carl5ony</a>
+                        </div>
+                    </header>
+                    <div class="mod-bd">
+                        <div class="img-box">
+                            <a href="/image/11">
+                                <img src="https://images.unsplash.com/photo-1467348733814-f93fc480bec6?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=42762441267f25b71ce0c3b791c3e298">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mod-ft">
+                        <ul class="discuss-list">
+                            <li class="more-discuss">
+                                <a href="/image/11/">
+                                    <span>全部 </span><span class="" >4</span>
+                                    <span> 条评论</span></a>
+                            </li>
+                            <div class="js-comment-list-11">
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/3" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">dan_carl5ony</a>
+                                <span>
+                                    <span>总有个人会带着万千宠</span>
+                                </span>
+                            </li>
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/3" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">dan_carl5ony</a>
+                                <span>
+                                    <span>没在一起，却从未分开</span>
+                                </span>
+                            </li>
+
+
+                            </div>
+                        </ul>
+                        <section class="discuss-edit">
+                            <a class="icon-heart-empty js-heart"></a>
+                            <!--don't know how to change the color of heart just like add comment in index page-->
+                            <input placeholder="添加评论..." id="jsCmt" type="text">
+                            <button class="more-info" id="11" content="请到图片详情页进行评论！" onclick=addcomment(this)>更多选项</button>
+                        </section>
+                    </div>
+                </article>
+
+
+                <article class="mod">
+                    <header class="mod-hd">
+                        <time class="time">2016-07-21 21:31:02</time>
+                        <a href="/profile/22" class="avatar">
+                            <!--
+                            image.user.id  image.user.head_url image.user.username 这迹象都显示不了
+                            但是在 manage.py 中却可以通过 image.user.id image.user.head_url 查询得到，不知为何？
+                            哈哈哈哈，，，不是查不到，而是所查询到不存在，编号出现了问题，，，，已解决
+                            -->
+                            <img src="https://images.unsplash.com/profile-1441301120788-eb1f8dca3bc5?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;fit=crop&amp;h=32&amp;w=32&amp;s=548b17c3a6bf57260e74667cda32ef5f">
+                        </a>
+                        <div class="profile-info">
+                            <a title="scottwebbt" href="/profile/22">scottwebbt</a>
+                        </div>
+                    </header>
+                    <div class="mod-bd">
+                        <div class="img-box">
+                            <a href="/image/87">
+                                <img src="http://www.tuweng.com/d/file/feeling/2014-07-21/e55682c102a8416f0fddbe6fdadae91a.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mod-ft">
+                        <ul class="discuss-list">
+                            <li class="more-discuss">
+                                <a href="/image/87/">
+                                    <span>全部 </span><span class="" >2</span>
+                                    <span> 条评论</span></a>
+                            </li>
+                            <div class="js-comment-list-87">
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/22" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">scottwebbt</a>
+                                <span>
+                                    <span>无情，是他在分手时给</span>
+                                </span>
+                            </li>
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/22" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">scottwebbt</a>
+                                <span>
+                                    <span>向往一个优雅的女人</span>
+                                </span>
+                            </li>
+
+                            </div>
+                        </ul>
+                        <section class="discuss-edit">
+                            <a class="icon-heart-empty js-heart"></a>
+                            <!--don't know how to change the color of heart just like add comment in index page-->
+                            <input placeholder="添加评论..." id="jsCmt" type="text">
+                            <button class="more-info" id="87" content="请到图片详情页进行评论！" onclick=addcomment(this)>更多选项</button>
+                        </section>
+                    </div>
+                </article>
+
+
+                <article class="mod">
+                    <header class="mod-hd">
+                        <time class="time">2016-07-21 21:31:02</time>
+                        <a href="/profile/5" class="avatar">
+                            <!--
+                            image.user.id  image.user.head_url image.user.username 这迹象都显示不了
+                            但是在 manage.py 中却可以通过 image.user.id image.user.head_url 查询得到，不知为何？
+                            哈哈哈哈，，，不是查不到，而是所查询到不存在，编号出现了问题，，，，已解决
+                            -->
+                            <img src="https://images.unsplash.com/profile-1466595709095-1fe336de40af?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;fit=crop&amp;h=32&amp;w=32&amp;s=23c2e6a29b11a52d51b444a43b18d4f9">
+                        </a>
+                        <div class="profile-info">
+                            <a title="ross_sokolovskis" href="/profile/5">ross_sokolovskis</a>
+                        </div>
+                    </header>
+                    <div class="mod-bd">
+                        <div class="img-box">
+                            <a href="/image/18">
+                                <img src="https://images.unsplash.com/photo-1465464388793-12ae9c0a6166?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=4210e3ca0197b8ef4e478444dac95d4d">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mod-ft">
+                        <ul class="discuss-list">
+                            <li class="more-discuss">
+                                <a href="/image/18/">
+                                    <span>全部 </span><span class="" >3</span>
+                                    <span> 条评论</span></a>
+                            </li>
+                            <div class="js-comment-list-18">
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/5" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">ross_sokolovskis</a>
+                                <span>
+                                    <span>这是爱情，请你不要太</span>
+                                </span>
+                            </li>
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/5" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">ross_sokolovskis</a>
+                                <span>
+                                    <span>你的名字，我的心事</span>
+                                </span>
+                            </li>
+
+
+                            </div>
+                        </ul>
+                        <section class="discuss-edit">
+                            <a class="icon-heart-empty js-heart"></a>
+                            <!--don't know how to change the color of heart just like add comment in index page-->
+                            <input placeholder="添加评论..." id="jsCmt" type="text">
+                            <button class="more-info" id="18" content="请到图片详情页进行评论！" onclick=addcomment(this)>更多选项</button>
+                        </section>
+                    </div>
+                </article>
+
+
+                <article class="mod">
+                    <header class="mod-hd">
+                        <time class="time">2016-12-20 16:39:26</time>
+                        <a href="/profile/25" class="avatar">
+                            <!--
+                            image.user.id  image.user.head_url image.user.username 这迹象都显示不了
+                            但是在 manage.py 中却可以通过 image.user.id image.user.head_url 查询得到，不知为何？
+                            哈哈哈哈，，，不是查不到，而是所查询到不存在，编号出现了问题，，，，已解决
+                            -->
+                            <img src="http://images.nowcoder.com/head/745t.png">
+                        </a>
+                        <div class="profile-info">
+                            <a title="wuing" href="/profile/25">wuing</a>
+                        </div>
+                    </header>
+                    <div class="mod-bd">
+                        <div class="img-box">
+                            <a href="/image/97">
+                                <img src="http://oa6ndt5vp.bkt.clouddn.com/cfa95ef8c68f11e68c6300163e004791.jpg">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mod-ft">
+                        <ul class="discuss-list">
+                            <li class="more-discuss">
+                                <a href="/image/97/">
+                                    <span>全部 </span><span class="" >0</span>
+                                    <span> 条评论</span></a>
+                            </li>
+                            <div class="js-comment-list-97">
+
+                            </div>
+                        </ul>
+                        <section class="discuss-edit">
+                            <a class="icon-heart-empty js-heart"></a>
+                            <!--don't know how to change the color of heart just like add comment in index page-->
+                            <input placeholder="添加评论..." id="jsCmt" type="text">
+                            <button class="more-info" id="97" content="请到图片详情页进行评论！" onclick=addcomment(this)>更多选项</button>
+                        </section>
+                    </div>
+                </article>
+
+
+                <article class="mod">
+                    <header class="mod-hd">
+                        <time class="time">2016-07-21 21:31:02</time>
+                        <a href="/profile/1" class="avatar">
+                            <!--
+                            image.user.id  image.user.head_url image.user.username 这迹象都显示不了
+                            但是在 manage.py 中却可以通过 image.user.id image.user.head_url 查询得到，不知为何？
+                            哈哈哈哈，，，不是查不到，而是所查询到不存在，编号出现了问题，，，，已解决
+                            -->
+                            <img src="https://images.unsplash.com/profile-fb-1468475748-62270f6926bb.jpg?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=faces&amp;fit=crop&amp;h=32&amp;w=32&amp;s=fba18598ee4a21ad8bc1504d68373f47">
+                        </a>
+                        <div class="profile-info">
+                            <a title="todd_diemert" href="/profile/1">todd_diemert</a>
+                        </div>
+                    </header>
+                    <div class="mod-bd">
+                        <div class="img-box">
+                            <a href="/image/3">
+                                <img src="https://images.unsplash.com/photo-1466046690866-98181611563d?ixlib=rb-0.3.5&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;w=1080&amp;fit=max&amp;s=cd9863d93454b1439a605bc9852e616b">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mod-ft">
+                        <ul class="discuss-list">
+                            <li class="more-discuss">
+                                <a href="/image/3/">
+                                    <span>全部 </span><span class="" >2</span>
+                                    <span> 条评论</span></a>
+                            </li>
+                            <div class="js-comment-list-3">
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/1" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">todd_diemert</a>
+                                <span>
+                                    <span>我给你的，都是青春。</span>
+                                </span>
+                            </li>
+
+
+                            <li>
+                                <!-- <a class=" icon-remove" title="删除评论"></a> -->
+                                <a class="_4zhc5 _iqaka" title="zjuyxy" href="/profile/1" data-reactid=".0.1.0.0.0.2.1.2:$comment-17856951190001917.1">todd_diemert</a>
+                                <span>
+                                    <span>天南水北，淡淡想起</span>
+                                </span>
+                            </li>
+
+                            </div>
+                        </ul>
+                        <section class="discuss-edit">
+                            <a class="icon-heart-empty js-heart"></a>
+                            <!--don't know how to change the color of heart just like add comment in index page-->
+                            <input placeholder="添加评论..." id="jsCmt" type="text">
+                            <button class="more-info" id="3" content="请到图片详情页进行评论！" onclick=addcomment(this)>更多选项</button>
+                        </section>
+                    </div>
+                </article>
+
+
+            </div>
+            <!--更多按钮为什么偏移靠下，只显示一半出来，在js并未成的时候却政策，css也完全一样根本没改动啊-->
+            <!--在整个外面在增加一个div和article将这部分套起来就可以了，其实就是尽量和profile.html保持一致-->
+
+            <div class="more-content js-load-more">
+                    <a class="_oidfu" id="more-btn" href="javascript:void(0);">更多</a>
+            </div>
+
+            </div>
+    </article>
+</div>
+<script>
+       function addcomment(e){
+         var id=e.getAttribute("id");
+         var cls = e.getAttribute('class');
+         var content = e.getAttribute('content')
+         return alert(content);
+       }
+</script>
+        </section>
+    </div>
+</body>
+<!--<script type="text/javascript">-->
+    <!--window.uid = 1;-->
+<!--//    window.uid how to set ?就设置成一个可以识别窗口的值就可以了-->
+<!--</script>-->
+<!--<script type="text/javascript" src="/static/js/jquery.js"></script>-->
+<!--<script type="text/javascript" src="/static/js/index.js"></script>-->
+{% endblock %}
+</html>
