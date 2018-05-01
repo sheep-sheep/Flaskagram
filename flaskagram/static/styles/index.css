@@ -1,8 +1,8 @@
-@import url(/common/base.css);
-@import url(/common/reset.css);
-@import url(/common/layout.css);
-@import url(/common/header.css);
-@import url(/common/footer.css);
+@import url(./common/reset.css);
+@import url(./common/base.css);
+@import url(./common/layout.css);
+@import url(./common/header.css);
+@import url(./common/footer.css);
 .page-main {
     width: 642px;
     margin: 0 auto;
@@ -137,17 +137,4 @@
     line-height: 18px;
     border: none;
     width: 484px;
-}
-.more-content {
-    margin: 50px auto 20px;
-    height: 120px;
-    width: 120px;
-    text-align: center;
-    line-height: 120px;
-    border-radius: 50%;
-    border: 2px solid #3897f0;
-}
-.more-content a {
-    color: #3897f0;
-    font-size: 14px;
 }

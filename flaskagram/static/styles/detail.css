@@ -1,5 +1,5 @@
-@import url(./common/base.css);
 @import url(./common/reset.css);
+@import url(./common/base.css);
 @import url(./common/layout.css);
 @import url(./common/header.css);
 @import url(./common/footer.css);
@@ -12,8 +12,7 @@
 }
 .pic-wrapper img {
     display: block;
-    width: 600px;
-    height: 600px;
+    max-width: 600px;
 }
 
 .pic-discuss {
