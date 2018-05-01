@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends "base.html" %}
+{% block title %}Profile Page{% endblock %}
+{% block css %}../static/styles/profile.css{% endblock %}
+
+<body>
+<div class="container">
+    <section>
+        {% block pagebody %}
+            <div class="page-main clearfix">
+                <article>
+                    <header class="profile-detail clearfix">
+                        <div class="profile-avatar">
+                            <img class="{{ user.username }}" src="{{ user.avatar_url }}">
+                        </div>
+                        <div class="profile-content">
+                            <div class="profile-info-main" data-reactid=".0.1.0.0:0.1.0">
+                                <h1 class="{{ user.username }}" title="{{ user.username }}">{{ user.username }}</h1>
+
+                            </div>
+
+                            <div class="profile-info-sub">
+                                <h2>Taylor Swift</h2>
+                                <span class="birth">Born in 1989.</span>
+                            </div>
+                            <ul class="status-list clearfix">
+                                <li>
+                                    <span class="s-title">已发帖 </span>
+                                    <span class="s-num">909</span>
+                                </li>
+                                <li>
+                                    <span class="s-num">909</span>
+                                    <span class="s-title">人关注 </span>
+                                </li>
+                                <li>
+                                    <span class="s-title">已关注 </span>
+                                    <span class="s-num">909万</span>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </header>
+                    <div class="list-mod">
+                        <div class="list clearfix js-image-list">
+                            {% for image in user.images %}
+                                <a class="item" href="/image/{{ image.id }}">
+                                    <div class="img-box">
+                                        <img src="{{ image.url }}">
+                                    </div>
+                                    <!-- <span class="ico-video">视频</span> -->
+                                    <div class="img-mask"></div>
+                                    <div class="interaction-wrap">
+                                        <div class="interaction-item"><i
+                                                class="icon-comment"></i>{{ image.comment|length }}</div>
+                                    </div>
+                                </a>
+                            {% endfor %}
+
+                        </div>
+
+                        <div class="more-content js-load-more">
+                            <a class="_oidfu" href="javascript:void(0);">更多</a>
+                        </div>
+
+                    </div>
+                </article>
+            </div>
+        {% endblock %}
+    </section>
+</div>
+</body>
+
+{#<script type="text/javascript">#}
+{#    window.uid = 2;#}
+{#</script>#}
+{#<script type="text/javascript" src="/static/js/jquery.js"></script>#}
+{#<script type="text/javascript" src="/static/js/profile.js"></script>#}
+
+</html>
