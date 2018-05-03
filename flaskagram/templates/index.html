@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 {% extends "base.html" %}
-{% block title %}Home Page{% endblock %}
+{% block title %}Home Page - {{ current_user.username }}{% endblock %}
 {% block css %}../static/styles/index.css{% endblock %}
 
 <body>
