@@ -60,3 +60,6 @@ env/
 
 #sqlite file
 *.db
+
+# static images
+flaskagram/static/images/
