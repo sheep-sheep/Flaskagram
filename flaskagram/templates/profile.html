@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 {% extends "base.html" %}
 {% block title %}Profile Page{% endblock %}
 {% block css %}../static/styles/profile.css{% endblock %}
@@ -16,8 +14,12 @@
                         </div>
                         <div class="profile-content">
                             <div class="profile-info-main" data-reactid=".0.1.0.0:0.1.0">
-                                <h1 class="{{ user.username }}" title="{{ user.username }}">{{ user.username }}</h1>
-
+                                <h1 class="name" title="{{ user.username }}">{{ user.username }}</h1>
+                                <span class="verified" title="Verified">Verified</span>
+                                <span class="_jxp6f _e616g">
+                                    <button class="btn-success">Upload Pics</button>
+                                </span>
+                                <button class="more-info">Options</button>
                             </div>
 
                             <div class="profile-info-sub">
@@ -48,7 +50,7 @@
                                     <div class="img-box">
                                         <img src="{{ image.url }}">
                                     </div>
-                                    <!-- <span class="ico-video">视频</span> -->
+                                    <!-- <span class="ico-video">Video</span> -->
                                     <div class="img-mask"></div>
                                     <div class="interaction-wrap">
                                         <div class="interaction-item"><i
@@ -70,11 +72,10 @@
     </section>
 </div>
 </body>
-
-{#<script type="text/javascript">#}
-{#    window.uid = 2;#}
-{#</script>#}
-{#<script type="text/javascript" src="/static/js/jquery.js"></script>#}
-{#<script type="text/javascript" src="/static/js/profile.js"></script>#}
-
-</html>
+{% block js %}
+    <script type="text/javascript">
+        window.uid = {{user.id}};
+    </script>
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <script type="text/javascript" src="../static/js/profile.js"></script>
+{% endblock %}
