@@ -1,5 +1,6 @@
 # -*- encoding: UTF-8 -*-
 import hashlib
+import json
 
 from flaskagram import app, db
 from flask import render_template, redirect, request, flash, get_flashed_messages
@@ -28,7 +29,23 @@ def profile(user_id):
     user = User.query.get(user_id)
     if user is None:
         return redirect('/')
-    return render_template('profile.html', user=user)
+    paginate = Image.query.filter_by(user_id=user_id).paginate(page=1, per_page=3, error_out=False)
+    return render_template('profile.html', user=user, images=paginate.items, has_next=paginate.has_next )
+
+
+@app.route('/profile/images/<int:user_id>/<int:page>/<int:per_page>/')
+def user_images(user_id, page, per_page):
+    paginate = Image.query.filter_by(user_id=user_id).paginate(page=page, per_page=per_page, error_out=False)
+    images = []
+    for image in paginate.items:
+        image_info = {'id': image.id,
+                      'url': image.url,
+                      'comment_count': len(image.comments)}
+        images.append(image_info)
+
+    map = {'has_next':paginate.has_next,
+           'images': images}
+    return json.dumps(map)
 
 
 @app.route('/loginpage/')

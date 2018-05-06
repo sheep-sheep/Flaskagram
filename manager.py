@@ -28,7 +28,7 @@ def _init_database():
 def _test_create_users():
     for i in range(100):
         db.session.add(User('User'+str(i), 'password'))
-        for j in range(3):
+        for j in range(9):
             db.session.add(Image(urls[random.randint(0,3)], i+1))
             for k in range(3):
                 db.session.add(Comment('I like it very much!', k+1, i+1))
