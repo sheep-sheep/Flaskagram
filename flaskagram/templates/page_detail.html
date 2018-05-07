@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
 {% extends "base.html" %}
 {% block title %}Page Detail{% endblock %}
 {% block css %}../static/styles/detail.css{% endblock %}
@@ -43,8 +41,8 @@
                         <section class="discuss-edit">
                             <a class="icon-heart-empty"></a>
                             <!--<a class="icon-heart-empty"></a>-->
-                            <input placeholder="添加评论..." id="jsCmt" type="text">
-                            <button class="more-info" id="jsSubmit">更多选项</button>
+                            <input placeholder="Add a comment..." id="jsCmt" type="text">
+                            <button class="more-info" id="jsSubmit">More...</button>
                         </section>
                     </div>
                 </article>
@@ -53,10 +51,10 @@
     </section>
 </div>
 </body>
-
-<!--<script type="text/javascript">-->
-<!--window.uid = 5;-->
-<!--</script>-->
-<!--<script type="text/javascript" src="/static/js/jquery.js"></script>-->
-<!--<script type="text/javascript" src="/static/js/detail.js"></script>-->
-</html>
+{% block js %}
+    <script type="text/javascript">
+        window.imageId ={{image.id}};
+    </script>
+    <script type="text/javascript" src="../static/js/jquery.js"></script>
+    <script type="text/javascript" src="../static/js/detail.js"></script>
+{% endblock %}

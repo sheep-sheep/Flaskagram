@@ -7,7 +7,9 @@ import os
 
 from flaskagram import app, db
 from flask import render_template, redirect, request, flash, get_flashed_messages, send_from_directory
-from flaskagram.models import Image, User
+
+from flaskagram.aws_s3 import s3_upload_file
+from flaskagram.models import Image, User, Comment
 from flask_login import login_user, logout_user, current_user, login_required
 import random
 
@@ -140,7 +142,7 @@ def upload():
             file_ext = file.filename.split('.')[-1].strip().lower()
         if file_ext in app.config['ALLOWED_EXT']:
             file_name = str(uuid.uuid4()).replace('-','') + '.' + file_ext
-            url = _save_to_local(file, file_name)
+            url = s3_upload_file(file, file_name)
             if url is not None:
                 db.session.add(Image(url, current_user.id))
                 db.session.commit()
@@ -150,3 +152,17 @@ def upload():
 @app.route('/image/<image_name>')
 def view_image(image_name):
     return send_from_directory(app.config['UPLOAD_DIR'], image_name)
+
+
+@app.route('/addcomment/', methods=['post'])
+def add_comment():
+    image_id = int(request.values['image_id'])
+    content = request.values['content']
+    comment = Comment(content, image_id, current_user.id)
+    db.session.add(comment)
+    db.session.commit()
+    return json.dumps({"code": 0,
+                       "id": comment.id,
+                       "contetn": content,
+                       "username": comment.user.username,
+                       "user_id": comment.user_id})
