@@ -1,9 +1,12 @@
 # -*- encoding: UTF-8 -*-
 import hashlib
 import json
+import uuid
+
+import os
 
 from flaskagram import app, db
-from flask import render_template, redirect, request, flash, get_flashed_messages
+from flask import render_template, redirect, request, flash, get_flashed_messages, send_from_directory
 from flaskagram.models import Image, User
 from flask_login import login_user, logout_user, current_user, login_required
 import random
@@ -121,3 +124,29 @@ def logout():
     return redirect('/')
 
 
+def _save_to_local(file, file_name):
+    save_dir = app.config['UPLOAD_DIR']
+    file.save(os.path.join(save_dir, file_name))
+    return '/image/' + file_name
+
+
+@app.route('/upload/', methods=['post'])
+def upload():
+    if request.files:
+        file = request.files['file']
+        file_ext = ''
+        # parse the file and get the extention
+        if file and file.filename.find('.')>0:
+            file_ext = file.filename.split('.')[-1].strip().lower()
+        if file_ext in app.config['ALLOWED_EXT']:
+            file_name = str(uuid.uuid4()).replace('-','') + '.' + file_ext
+            url = _save_to_local(file, file_name)
+            if url is not None:
+                db.session.add(Image(url, current_user.id))
+                db.session.commit()
+    return redirect('/profile/%d'%current_user.id)
+
+
+@app.route('/image/<image_name>')
+def view_image(image_name):
+    return send_from_directory(app.config['UPLOAD_DIR'], image_name)

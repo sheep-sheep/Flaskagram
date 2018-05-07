@@ -63,5 +63,5 @@ env/
 
 # static images
 flaskagram/static/images/
-*.jbg
+*.jpg
 *.png
