@@ -1,5 +1,6 @@
 # -*- encoding: UTF-8 -*-
 import random
+import unittest
 
 from flaskagram import app, db
 from flask_script import Manager
@@ -52,6 +53,12 @@ def _delete_comment():
         db.session.delete(comment)
     db.session.commit()
 
+
+@manager.command
+def run_test():
+    tests = unittest.TestLoader().discover('./')
+    unittest.TextTestRunner().run(tests)
+    print('Done')
 
 if __name__ == '__main__':
     manager.run()

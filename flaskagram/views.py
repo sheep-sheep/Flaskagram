@@ -28,7 +28,7 @@ def image(image_id):
     return render_template('page_detail.html', image=image)
 
 
-@app.route('/profile/<int:user_id>')
+@app.route('/profile/<int:user_id>/')
 @login_required
 def profile(user_id):
     user = User.query.get(user_id)
@@ -166,3 +166,27 @@ def add_comment():
                        "contetn": content,
                        "username": comment.user.username,
                        "user_id": comment.user_id})
+
+
+@app.route('/index/images/<int:page>/<int:per_page>/')
+def index_images(page, per_page):
+    paginate = Image.query.paginate(page=page, per_page=per_page, error_out=False)
+    map = {"has_next": paginate.has_next}
+    images = []
+    for image in paginate.items:
+        comments = []
+        for i in range(0, min(2, len(image.comments))):
+            comment = image.comments[i]
+            comments.append({"username": comment.user.username,
+                             "user_id": comment.user_id,
+                             "content": comment.content})
+        imageinfo = {"id": image.id,
+                     "url": image.url,
+                     "comment_count": len(image.comments),
+                     "head_url": image.user.avatar_url,
+                     "created_date": str(image.created_time),
+                     "comments": comments
+                     }
+        images.append(imageinfo)
+    map["images"] = images
+    return json.dumps(map)
