@@ -1,0 +1,102 @@
+2018.04.29 Sun
+1. Flask_Script
+    Its manager feature can assist you to create new methods and called by manager command.
+
+2. Separate the system command the business logic code
+
+3. Flask project structure
+    /app
+        manage.py           # command script
+        runserver.py        # server main script
+        /application
+            __init__.py     # init
+            /config
+                app.conf        # config files
+            models.py       # data model
+            views.py        # views
+        /static             
+        /templates          # pages
+            base.html
+            index.html
+            login.html
+
+4. ORM
+    Object Relational Mapping
+
+5. SQLite
+    CRUD
+    Page!!!
+
+6. HTML
+    build a module for the webpage
+
+
+2018.05.01 Tue
+1. Login
+    username(script injection, html username, admin)
+        salt
+    password
+    verification(drag to verify)
+
+2. Login/out
+    verify the user+password
+    then assign a token(sessionid/cookie) for the user(with expiration date)
+
+    delete the token
+    clear the session
+
+3. Flask-login manager
+
+2018.05.02 Wed
+1. User security
+    HTTPS Register
+    H5 public secrete key + private key
+    password salt
+    token expiration date
+    verification
+
+2. AJAX
+    dont't need to reload page
+    better user experience
+    less communication between client and server
+    work for both App and website
+    same format
+
+
+2018.05.06 Sun
+1. S3 and its CLI upload
+2. PIL
+
+2018.05.07 Mon
+1. Unit Test
+    Test Driven Development
+        init data
+        check business logic
+        verify the logic's result
+        clear the data(tear down)
+
+
+2. Deployment
+    nginx
+        reverse proxy(server point of view):  get resources from other machines
+    requirements
+    Gunicorn
+    listen internal ports
+
+3. Future Development
+    user verification - email(flask mail)
+    admin account to delete images
+    recommendation
+    **record the PV and adjust the ranking**
+    **resize the images**
+    **scraping image and comments**
+    ads
+
+4. Interview tips
+    Database, **ORM**, **SQLAlchemy**
+    MVC(Design Pattern), Front/Back End
+    Unittest
+    S3
+    AJAX
+    Flask Framework
+    Git
