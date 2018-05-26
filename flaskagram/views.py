@@ -2,9 +2,6 @@
 import hashlib
 import json
 import uuid
-
-import os
-
 from flaskagram import app, db
 from flask import render_template, redirect, request, flash, get_flashed_messages, send_from_directory
 
@@ -12,11 +9,8 @@ from flaskagram.aws_s3 import s3_upload_file
 from flaskagram.models import Image, User, Comment
 from flask_login import login_user, logout_user, current_user, login_required
 import random
-import logging
 import os
 
-logger = logging.getLogger(__name__)
-logger.setLevel(logging.INFO)
 
 @app.route('/')
 def index():
