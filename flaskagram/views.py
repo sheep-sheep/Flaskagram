@@ -12,10 +12,16 @@ from flaskagram.aws_s3 import s3_upload_file
 from flaskagram.models import Image, User, Comment
 from flask_login import login_user, logout_user, current_user, login_required
 import random
+import logging
+import os
 
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
 
 @app.route('/')
 def index():
+    app.logger.info('Entering the Index page...')
+    app.logger.info('Current dir is %s'%os.pardir)
     images = Image.query.order_by('id').limit(10).all()
     return render_template('index.html', images=images)
 
