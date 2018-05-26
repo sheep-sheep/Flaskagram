@@ -7,7 +7,7 @@ User=ubuntu
 Group=www-data
 WorkingDirectory=/var/www/project/Flaskagram
 Environment="PATH=/usr/local/bin"
-ExecStart=/usr/local/bin/gunicorn --workers 3 --bind unix:/var/www/project/Flaskagram/flaskagram.sock -m 007 runserver:app
+ExecStart=/var/www/html/Flaskagram/venv/bin/gunicorn --workers 3 --bind unix:/var/www/html/Flaskagram/flaskagram.sock -m 007 runserver:app --error-logfile /var/log/gunicorn/error.log --log-file /var/log/gunicorn/access.log
 
 [Install]
 WantedBy=multi-user.target
