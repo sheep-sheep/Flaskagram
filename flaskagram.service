@@ -5,7 +5,7 @@ After=network.target
 [Service]
 User=ubuntu
 Group=www-data
-WorkingDirectory=/var/www/project/Flaskagram
+WorkingDirectory=/var/www/html/Flaskagram
 Environment="PATH=/usr/local/bin"
 ExecStart=/var/www/html/Flaskagram/venv/bin/gunicorn    --workers=3\
                                                         --bind=unix:/var/www/html/Flaskagram/flaskagram.sock\
